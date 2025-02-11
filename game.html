@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <title>Snake - Adriano</title>
+        <link rel = "stylesheet" href = "style.css">
+
+    </head>
+
+    <body>
+
+        <div class = "gamecontainer">
+
+            <header>
+
+                <a id = "gotohome" class = "gamebutton" href = "index.html">Go to Home</a>
+                <p id = "startgame" class = "gamescore">Score: 0</p>
+                <p id = "resetgame" class = "gamebutton">Reset</p>
+    
+            </header>
+    
+            <main id = "gameboard">
+    
+                <!-- Esto es el tablero -->
+
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+                <div class = "gamecell"></div>
+                <div class = "gamecell altgamecell"></div>
+    
+            </main>
+
+        </div>
+
+        <form class = "gameover" method = "POST">
+
+            <span class = "closemodalbutton">&times;</span>
+
+            <p class = "gameovertitle">Game Over</p>
+
+            <p class = "gameovertext">Your final score is x points!</p>
+            <p class = "gameovertext">Introduce your name to save your score</p>
+
+            <div class = "gameoverinputs">
+
+                <input id = "playername" type = "text">
+
+                <input id = "savescore" type = "submit" value = "Save Score">
+
+            </div>
+
+        </form>
+
+        <div class = "ranking">
+
+            <!-- Modal para mostrar el ranking -->
+
+        </div>
+
+    </body>
+
+    <script src = "https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src = "game.js"></script>
+
+</html>

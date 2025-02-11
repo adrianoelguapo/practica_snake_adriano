@@ -1,0 +1,245 @@
+/* --- Importar fuentes --- */
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&display=swap');
+
+/* --- Estilos generales --- */
+body{
+    margin: 0;
+    background-image: url("images/bg.jpg");
+    background-size: cover;
+}
+
+/* --- Estilos para la página de inicio (index.html) --- */
+.homecontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.hometitle{
+    display: flex;
+    justify-content: center;
+    font-family: "Press Start 2P", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 90px;
+}
+
+.homebuttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.button{
+    text-decoration: none;
+    color: white;
+    font-family: "Press Start 2P", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #3E0C26;
+    padding: 1%;
+    border-radius: 5px;
+    border: 2px solid white;
+    transition: all 0.3s;
+    cursor: pointer;
+    width: 25%;
+    text-align: center;
+    margin-top: 2.5%;
+}
+
+.button:hover{
+    transform: scale(1.05);
+    background-color: #511032;
+}
+
+/* --- Estilos para la página del juego (game.js) --- */
+.gamecontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.gamebutton,
+.gamescore{
+    text-decoration: none;
+    color: white;
+    font-family: "Press Start 2P", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #3E0C26;
+    padding: 1%;
+    border-radius: 5px;
+    border: 2px solid white;
+    transition: all 0.3s;
+    width: 20%;
+    text-align: center;
+    margin-top: 2.5%;
+}
+
+.gamebutton:hover{
+    transform: scale(1.05);
+    background-color: #511032;
+    cursor: pointer;
+}
+
+#gotohome{
+    margin-bottom: 0.75%
+}
+
+#gameboard {
+    width: 620px;
+    height: 620px;
+    background-color: #3E0C26;
+    border-radius: 5px;
+    border: 2px solid white;
+    margin-top: 1.5%;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+}
+
+#gameboard .gamecell {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#gameboard .altgamecell{
+    background-color: #511032;
+}
+
+#gameboard .gamecell img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.1s linear;
+}
+
+/* --- Estilos para el modal del Ranking --- */
+.ranking{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    width: 30%;
+    background-color: #3E0C26;
+    border: 2px solid white;
+    color: white;
+}
+
+.rankingtitle{
+    font-family: "Press Start 2P", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+}
+
+.rankingscore{
+    font-family: "DotGothic16", serif;
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+.closemodalbutton{
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.closemodalbutton:hover{
+    color: rgb(95, 95, 95);
+}
+
+/* --- Estilos para el modal de game over --- */
+.gameover{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    width: 30%;
+    background-color: #3E0C26;
+    border: 2px solid white;
+    color: white;
+}
+
+.gameovertitle{
+    font-family: "Press Start 2P", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+}
+
+.gameovertext{
+    font-family: "DotGothic16", serif;
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+.gameoverinputs{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+#playername{
+    font-family: "DotGothic16", serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 20px;
+    width: 50%;
+    color: #3E0C26;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+#savescore{
+    font-family: "Press Start 2P", serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 2%;
+    background-color: white;
+    color: #3E0C26;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#savescore:hover{
+    transform: scale(1.1);
+}
